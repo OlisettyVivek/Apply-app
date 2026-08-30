@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/organic-98ac1cf6-5930-4bc7-85f4-24350131523b/styles.css">
+<script src="_ds/organic-98ac1cf6-5930-4bc7-85f4-24350131523b/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:#e3d7c0;}
+@keyframes pressPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.06);opacity:1}}
+@keyframes riseIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.pm-scroll::-webkit-scrollbar{display:none}
+.iosui{font-family:-apple-system,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.01em;
+  --color-bg:#000000;--color-surface:#1c1c1e;--color-text:#ffffff;
+  --color-neutral-100:#1c1c1e;--color-neutral-200:#2c2c2e;--color-neutral-300:#3a3a3c;--color-neutral-400:#48484a;
+  --color-neutral-600:rgba(235,235,245,.6);--color-neutral-700:rgba(235,235,245,.6);--color-neutral-800:#e5e5ea;--color-neutral-900:#f2f2f7;
+  --color-accent-100:rgba(214,127,72,.17);--color-accent-200:rgba(214,127,72,.26);--color-accent-300:rgba(214,127,72,.42);
+  --color-accent-700:#f6a06b;--color-accent-800:#ffc6a5;
+  --color-accent-2-100:rgba(143,160,115,.18);--color-accent-2-200:rgba(143,160,115,.28);--color-accent-2-300:rgba(143,160,115,.45);
+  --color-accent-2-700:#aebf92;--color-accent-2-800:#ccdbb2;--color-accent-2-900:#e1eecc;
+  --color-divider:rgba(84,84,88,.5);--radius-sm:12px;--radius-md:18px;--radius-lg:26px;
+  --shadow-sm:inset 0 0 0 .5px rgba(255,255,255,.08);--shadow-md:0 10px 30px rgba(0,0,0,.5)}
+.iosui .pm-sheet{--color-neutral-100:#ffffff;--color-neutral-600:rgba(60,60,67,.6);--color-neutral-700:rgba(60,60,67,.6);--color-neutral-800:#3a3a3c;--color-neutral-900:#1c1c1e;--color-text:#111;--color-divider:rgba(60,60,67,.2);--color-accent-100:#fff2eb;--color-accent-300:#ffc6a5;--color-accent-700:#8c491a;--color-accent-800:#643312;--color-accent-2-100:#f0fae1;--color-accent-2-700:#56633f;--color-accent-2-800:#3d472b;--color-accent-2-900:#272e1b;background:#fff;color:#111}
+.iosui h3,.iosui h4{font-family:-apple-system,"SF Pro Display",system-ui;font-weight:700;letter-spacing:-.024em}
+.iosui .btn{font-family:-apple-system,system-ui;font-weight:590;letter-spacing:-.01em}
+.iosui .input{background:#1c1c1e;border-color:rgba(84,84,88,.55);color:#fff}
+.iosui .input::placeholder{color:rgba(235,235,245,.35)}
+.iosui .btn-primary,.iosui .btn-primary:hover{background:#d67f48;color:#fff}
+.iosui .btn-secondary{background:#2c2c2e;color:#fff;border-color:transparent}
+.iosui .btn-secondary:hover{background:#3a3a3c}
+.iosui .btn-ghost{color:#f6a06b}
+.iosui .tag-neutral{background:#2c2c2e;color:#e5e5ea}
+.iosui .tag-outline{border-color:rgba(84,84,88,.6);color:#e5e5ea}
+.iosui .pm-sheet .tag-outline{border-color:rgba(60,60,67,.3);color:#3a3a3c}
+.iosui .tag{font-family:-apple-system,system-ui;font-weight:590}
+.iosui [style*="--font-heading"]{font-family:-apple-system,"SF Pro Display",system-ui !important;font-weight:600}
+.iosui .pm-sheet [style*="--font-heading"]{font-family:var(--font-heading) !important;font-weight:400}
+.iosui input,.iosui textarea{font-family:-apple-system,"SF Pro Text",system-ui,sans-serif}
+.ios-back{display:flex;align-items:center;gap:1px;background:none;border:0;padding:0 10px 0 0;margin-left:-4px;min-height:44px;cursor:pointer;color:var(--color-accent-700);font-size:17px;font-family:-apple-system,system-ui;letter-spacing:-.02em}
+.ios-back:hover{opacity:.6}
+.ios-lt{font-family:-apple-system,"SF Pro Display",system-ui;font-size:36px;font-weight:700;line-height:1.04;letter-spacing:-.034em;margin:2px 0 16px}
+.iosui button{color:inherit;transition:transform .16s ease,opacity .16s ease}
+.iosui .pm-sheet button{color:#111}
+.iosui button:active{transform:scale(.97)}
+.ios-sh{font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--color-neutral-600);font-weight:590;margin:0 4px 7px;font-family:-apple-system,system-ui}
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1c1c1e"/><rect x="30" y="30" width="40" height="40" rx="12" fill="#d67f48"/><text x="50" y="63" font-family="-apple-system,system-ui,sans-serif" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">A</text></svg></template>
+<div style="padding:44px 48px 60px;font-family:var(--font-body);color:var(--color-text)">
+
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px">
+<h2 style="margin:0">Apply — mobile</h2>
+<span class="tag tag-accent-2">Interactive prototype</span>
+</div>
+<p class="text-muted" style="max-width:640px;margin:0 0 30px">Apply reads your history out of your old resume once. Each new application is then a paste, a tone, and one tap — resume, cover letter and email come out matched to the posting. Tap through the phone; the strip under it jumps to any screen.</p>
+
+<div style="display:flex;gap:44px;align-items:flex-start;flex-wrap:wrap">
+
+<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+
+<div class="pm-scroll iosui" style="height:874px;position:relative;display:flex;flex-direction:column;background:#000;color:#fff;overflow:hidden">
+
+<sc-if value="{{ isWelcome }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 26px 44px;background:radial-gradient(120% 75% at 50% 0%, rgba(214,127,72,.3) 0%, rgba(0,0,0,0) 60%), #000">
+<div style="width:72px;height:72px;border-radius:22px;background:#d67f48;display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 12px 34px rgba(214,127,72,.42)">
+<span style="font-family:var(--font-heading);font-size:32px;color:#fff">A</span>
+</div>
+<h3 class="ios-lt" style="font-size:38px;margin:0 0 12px">Every application,<br>written for the job.</h3>
+<p style="font-size:16px;line-height:1.5;color:rgba(235,235,245,.62);margin:0 0 26px">Upload your resume once. Paste a posting, or let Handshake feed them in. Each one gets its own resume, cover letter and email.</p>
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:22px">
+<sc-for list="{{ welcomePoints }}" as="w" hint-placeholder-count="3">
+<div style="display:flex;gap:11px;align-items:flex-start">
+<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#aebf92" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px"><path d="m4 12.5 5 5L20 6.5"></path></svg>
+<span style="font-size:14.5px;line-height:1.45;color:#e5e5ea">{{ w }}</span>
+</div>
+</sc-for>
+</div>
+<button class="btn btn-block" style="padding:18px;font-size:17px;border-radius:999px;background:#fff;color:#000;margin-bottom:10px" onClick="{{ goHome }}">Continue with Apple</button>
+<button class="btn btn-block" style="padding:18px;font-size:17px;border-radius:999px;background:#2c2c2e;color:#fff" onClick="{{ goHome }}">Continue with email</button>
+<div style="text-align:center;font-size:11.5px;color:rgba(235,235,245,.45);margin-top:14px">Free and unlimited. No card, no trial.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isApps }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;overflow:auto;padding:68px 22px 20px">
+<h3 class="ios-lt" style="margin:0 0 14px">Applications</h3>
+<div style="display:flex;gap:6px;background:#1c1c1e;border-radius:999px;padding:4px;margin-bottom:20px">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="3">
+<button style="{{ f.style }}" onClick="{{ f.pick }}">{{ f.label }}</button>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ applications }}" as="a" hint-placeholder-count="6">
+<button style="display:flex;gap:12px;align-items:center;text-align:left;width:100%;cursor:pointer;font-family:inherit;background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);padding:14px 16px" onClick="{{ a.open }}">
+<div style="flex:1;min-width:0">
+<div style="font-size:15px;font-weight:600">{{ a.role }}</div>
+<div style="font-size:12.5px;color:var(--color-neutral-600);margin-top:1px">{{ a.company }} · {{ a.when }}</div>
+</div>
+<span style="{{ a.statusStyle }}">{{ a.status }}</span>
+</button>
+</sc-for>
+</div>
+<div style="text-align:center;font-size:12px;color:var(--color-neutral-600);margin-top:18px">Documents for every one of these are saved.</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="flex:1;overflow:auto;padding:68px 22px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:26px">
+<div>
+<div style="font-size:13px;letter-spacing:.02em;color:var(--color-neutral-600);font-weight:500">Wednesday, 29 August</div>
+<h3 class="ios-lt" style="margin:2px 0 0">Apply</h3>
+</div>
+<button style="width:46px;height:46px;border-radius:999px;background:var(--color-accent-2-300);border:0;cursor:pointer;font-family:var(--font-heading);font-size:18px;color:var(--color-accent-2-900)" onClick="{{ goSettings }}">JR</button>
+</div>
+
+<div style="background:var(--color-surface);border-radius:var(--radius-lg);padding:20px 20px 18px;margin-bottom:16px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+<div>
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700">Your background</div>
+<div style="font-family:var(--font-heading);font-size:19px;margin-top:6px">4 roles · 8 years · 14 skills</div>
+</div>
+<div style="width:42px;height:42px;border-radius:999px;background:var(--color-accent-2-500);flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px">✓</div>
+</div>
+<button class="btn btn-ghost" style="margin-top:14px;padding:8px 16px;font-size:13px" onClick="{{ goProfile }}">Edit background</button>
+</div>
+
+<button class="btn btn-primary btn-block" style="padding:19px;font-size:17px;border-radius:999px;box-shadow:0 8px 22px rgba(198,113,57,.3);margin-bottom:8px" onClick="{{ goUpload }}">New application</button>
+<div style="text-align:center;font-size:12px;color:var(--color-neutral-600);margin-bottom:16px">Unlimited runs, free — powered by Claude</div>
+
+<button style="display:flex;gap:13px;align-items:center;text-align:left;width:100%;background:var(--color-accent-2-100);border:1px solid var(--color-accent-2-300);border-radius:var(--radius-lg);padding:16px 18px;cursor:pointer;font-family:inherit;margin-bottom:28px" style-hover="background:var(--color-accent-2-200)" onClick="{{ goAuto }}">
+<div style="width:40px;height:40px;border-radius:999px;background:var(--color-accent-2-500);color:#fff;flex:none;display:flex;align-items:center;justify-content:center;font-size:18px">⚡</div>
+<div style="flex:1;min-width:0">
+<div style="font-family:var(--font-heading);font-size:16px;color:var(--color-accent-2-900)">Auto-apply on Handshake</div>
+<div style="font-size:12.5px;color:var(--color-accent-2-800)">34 openings match you today</div>
+</div>
+<span style="font-size:17px;color:var(--color-accent-2-700)">›</span>
+</button>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;margin:0 4px 7px">
+<div class="ios-sh" style="margin:0">Recent</div>
+<button style="background:none;border:0;padding:0;cursor:pointer;font-family:inherit;font-size:13.5px;color:#f6a06b" onClick="{{ goApps }}">See all</button>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{ recents }}" as="app" hint-placeholder-count="3">
+<button style="display:flex;gap:14px;align-items:center;text-align:left;background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);padding:14px 16px;cursor:pointer;font-family:inherit;width:100%" style-hover="background:#2c2c2e" onClick="{{ app.open }}">
+<div style="width:38px;height:38px;border-radius:999px;background:var(--color-accent-200);flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:15px;color:var(--color-accent-800)">{{ app.initial }}</div>
+<div style="flex:1;min-width:0">
+<div style="font-weight:600;font-size:15px">{{ app.role }}</div>
+<div style="font-size:12.5px;color:var(--color-neutral-600);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ app.company }} · {{ app.when }}</div>
+</div>
+<span style="{{ app.statusStyle }}">{{ app.status }}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isAuto }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;overflow:auto;padding:68px 22px 20px">
+
+<sc-if value="{{ batchIdle }}" hint-placeholder-val="{{ true }}">
+<h3 style="margin:0 0 6px">Auto-apply</h3>
+<p style="font-size:14px;line-height:1.55;color:var(--color-neutral-700);margin:0 0 22px">Every opening gets its own resume, rewritten against that posting. Nothing is sent as a copy of anything else.</p>
+
+<div style="display:flex;align-items:center;gap:13px;background:var(--color-accent-2-100);border-radius:var(--radius-md);padding:14px 16px;margin-bottom:12px">
+<div style="width:38px;height:38px;border-radius:999px;background:var(--color-accent-2-500);color:#fff;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:16px">H</div>
+<div style="flex:1;min-width:0">
+<div style="font-weight:700;font-size:14.5px;color:var(--color-accent-2-900)">Handshake connected</div>
+<div style="font-size:12px;color:var(--color-accent-2-800)">34 openings match your background</div>
+</div>
+<span class="tag tag-accent-2" style="flex:none">Synced</span>
+</div>
+
+<div style="background:var(--color-surface);border-radius:var(--radius-md);padding:15px 16px;margin-bottom:24px">
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin-bottom:4px">Apply somewhere else</div>
+<div style="font-size:13px;line-height:1.5;color:var(--color-neutral-800);margin-bottom:10px">Give us a careers page or job board and we'll tailor to each posting there too.</div>
+<div style="display:flex;gap:8px">
+<input class="input" placeholder="company.com/careers" style="flex:1;min-width:0;font-size:13.5px" value="{{ siteUrl }}" onChange="{{ onSiteChange }}">
+<button class="btn btn-primary" style="padding:11px 18px;font-size:13px;{{ addStyle }}" onClick="{{ addSite }}">Add</button>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px;margin-top:12px">
+<sc-for list="{{ sites }}" as="s" hint-placeholder-count="1">
+<div style="display:flex;align-items:center;gap:10px;background:var(--color-neutral-100);border-radius:var(--radius-sm);padding:10px 12px">
+<div style="width:7px;height:7px;border-radius:999px;background:var(--color-accent-2-500);flex:none"></div>
+<div style="flex:1;min-width:0">
+<div style="font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ s.url }}</div>
+<div style="font-size:11px;color:var(--color-neutral-600)">{{ s.note }}</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px">
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700">Matching openings</div>
+<button class="btn btn-ghost" style="padding:5px 12px;font-size:12px" onClick="{{ selectAll }}">{{ selectAllLabel }}</button>
+</div>
+<div style="display:flex;flex-direction:column;gap:9px">
+<sc-for list="{{ openings }}" as="o" hint-placeholder-count="6">
+<button style="{{ o.rowStyle }}" onClick="{{ o.toggle }}">
+<div style="{{ o.boxStyle }}">{{ o.check }}</div>
+<div style="flex:1;min-width:0">
+<div style="font-size:14px;font-weight:600">{{ o.role }}</div>
+<div style="font-size:12px;color:var(--color-neutral-600)">{{ o.company }} · {{ o.meta }}</div>
+</div>
+<div style="font-family:var(--font-heading);font-size:14px;color:var(--color-accent-2-800);flex:none">{{ o.matchLabel }}</div>
+</button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{ batchRunning }}" hint-placeholder-val="{{ false }}">
+<h3 style="margin:0 0 6px">{{ batchHeadline }}</h3>
+<p style="font-size:14px;line-height:1.55;color:var(--color-neutral-700);margin:0 0 22px">{{ batchNote }}</p>
+<div style="display:flex;flex-direction:column;gap:9px">
+<sc-for list="{{ queue }}" as="q" hint-placeholder-count="4">
+<div style="display:flex;gap:13px;align-items:center;background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);padding:13px 15px">
+<div style="{{ q.dotStyle }}">{{ q.dot }}</div>
+<div style="flex:1;min-width:0">
+<div style="font-size:14px;font-weight:600">{{ q.role }}</div>
+<div style="font-size:12px;color:var(--color-neutral-600)">{{ q.company }}</div>
+</div>
+<div style="{{ q.stateStyle }}">{{ q.state }}</div>
+</div>
+</sc-for>
+</div>
+<sc-if value="{{ batchDone }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;gap:10px;margin-top:18px">
+<button class="btn btn-secondary" style="flex:1;padding:14px;font-size:14px" onClick="{{ resetBatch }}">Back to openings</button>
+<button class="btn btn-primary" style="flex:1;padding:14px;font-size:14px" onClick="{{ openDocs }}">Review documents</button>
+</div>
+</sc-if>
+</sc-if>
+
+</div>
+<sc-if value="{{ batchIdle }}" hint-placeholder-val="{{ true }}">
+<div style="padding:12px 22px 12px;background:var(--color-bg);border-top:1px solid var(--color-divider)">
+<button class="btn btn-primary btn-block" style="padding:17px;font-size:16px;border-radius:999px;{{ batchStyle }}" onClick="{{ startBatch }}">{{ batchLabel }}</button>
+<div style="text-align:center;font-size:11.5px;color:var(--color-neutral-600);margin-top:7px">You review every draft before it sends</div>
+</div>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ isUpload }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;overflow:auto;padding:64px 22px 130px">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
+<button class="ios-back" onClick="{{ goHome }}"><span style="font-size:26px;line-height:1;margin-top:-3px">‹</span>Back</button>
+<div style="font-size:15px;color:var(--color-neutral-600);font-weight:500">Step 1 of 2</div>
+</div>
+<h3 class="ios-lt" style="margin:4px 0 6px">Upload your old resume</h3>
+<p style="font-size:14px;line-height:1.55;color:var(--color-neutral-700);margin:0 0 20px">We read your details out of it once — history, dates, skills — then rewrite it against whatever posting you paste next.</p>
+
+<sc-if value="{{ parseIdle }}" hint-placeholder-val="{{ true }}">
+<button style="width:100%;border:2px dashed var(--color-accent-400);background:var(--color-accent-100);border-radius:var(--radius-lg);padding:34px 20px;cursor:pointer;font-family:inherit;display:flex;flex-direction:column;align-items:center;gap:10px" style-hover="background:var(--color-accent-200);border-color:var(--color-accent-600)" onClick="{{ uploadResume }}">
+<div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px">↑</div>
+<div style="font-family:var(--font-heading);font-size:17px;color:var(--color-accent-800)">Choose a file</div>
+<div style="font-size:12px;color:var(--color-accent-700)">PDF, Word or Pages · up to 10 MB</div>
+</button>
+<div style="display:flex;gap:10px;margin-top:12px">
+<button class="btn btn-secondary" style="flex:1;padding:13px;font-size:13px" onClick="{{ uploadResume }}">Photograph it</button>
+<button class="btn btn-secondary" style="flex:1;padding:13px;font-size:13px" onClick="{{ uploadResume }}">Paste the text</button>
+</div>
+<button class="btn btn-ghost btn-block" style="margin-top:14px;padding:12px;font-size:13px" onClick="{{ goInput }}">I don't have one — start from scratch</button>
+</sc-if>
+
+<sc-if value="{{ parseReading }}" hint-placeholder-val="{{ false }}">
+<div style="background:var(--color-surface);border-radius:var(--radius-lg);padding:30px 22px;text-align:center">
+<div style="width:56px;height:56px;border-radius:999px;background:var(--color-accent-400);margin:0 auto 16px;animation:pressPulse 1.2s ease-in-out infinite"></div>
+<div style="font-family:var(--font-heading);font-size:17px">Reading Reyes-Resume-2024.pdf</div>
+<div style="font-size:12.5px;color:var(--color-neutral-700);margin-top:5px">Pulling out roles, dates and skills</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ parseDone }}" hint-placeholder-val="{{ false }}">
+<div style="animation:riseIn .3s ease both">
+<div style="display:flex;align-items:center;gap:12px;background:var(--color-accent-2-100);border-radius:var(--radius-md);padding:14px 16px;margin-bottom:16px">
+<div style="width:34px;height:34px;border-radius:999px;background:var(--color-accent-2-500);color:#fff;flex:none;display:flex;align-items:center;justify-content:center;font-size:16px">✓</div>
+<div style="flex:1;min-width:0">
+<div style="font-weight:700;font-size:14px;color:var(--color-accent-2-900)">Reyes-Resume-2024.pdf</div>
+<div style="font-size:12px;color:var(--color-accent-2-800)">Read in 1.2s · 2 pages</div>
+</div>
+</div>
+<div class="ios-sh">What we found</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ extracted }}" as="e" hint-placeholder-count="5">
+<div style="display:flex;gap:12px;align-items:center;background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);padding:12px 15px">
+<div style="width:78px;flex:none;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-600);font-weight:700">{{ e.field }}</div>
+<div style="flex:1;min-width:0;font-size:13.5px;font-weight:600">{{ e.value }}</div>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f6a06b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 20h4L20 8l-4-4L4 16z"></path></svg>
+</div>
+</sc-for>
+</div>
+<div style="margin-top:14px;background:var(--color-surface);border-radius:var(--radius-md);padding:14px 16px;font-size:13px;color:var(--color-neutral-800)">Saved to your background, so this is the last time you upload it.</div>
+</div>
+</sc-if>
+</div>
+<div style="padding:14px 22px 42px;background:var(--color-bg);border-top:1px solid var(--color-divider)">
+<button class="btn btn-primary btn-block" style="padding:19px;font-size:17px;border-radius:999px;box-shadow:0 8px 22px rgba(198,113,57,.3);{{ continueStyle }}" onClick="{{ goInput }}">Next — paste the job</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isInput }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;overflow:auto;padding:64px 22px 130px">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+<button class="ios-back" onClick="{{ goUpload }}"><span style="font-size:26px;line-height:1;margin-top:-3px">‹</span>Back</button>
+<div style="font-size:15px;color:var(--color-neutral-600);font-weight:500">Step 2 of 2</div>
+</div>
+<h3 class="ios-lt" style="margin:4px 0 6px">Paste the job</h3>
+<p style="font-size:14px;line-height:1.55;color:var(--color-neutral-700);margin:0 0 20px">Your uploaded resume gets rewritten against this posting — same facts, reordered and reworded to match what they ask for.</p>
+
+<div class="ios-sh">The posting</div>
+<div style="display:flex;gap:10px;margin-bottom:12px">
+<button class="btn btn-secondary" style="flex:1;padding:12px;font-size:13px" onClick="{{ pasteJob }}">Paste from clipboard</button>
+<button class="btn btn-secondary" style="flex:1;padding:12px;font-size:13px" onClick="{{ pasteJob }}">Scan posting</button>
+</div>
+<textarea class="input" rows="7" placeholder="Or paste the posting here — responsibilities, requirements, everything." style="width:100%;border-radius:var(--radius-md);resize:none;font-size:14px;line-height:1.5" value="{{ jobText }}" onChange="{{ onJobChange }}"></textarea>
+
+<sc-if value="{{ hasJob }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;animation:riseIn .3s ease both">
+<span class="tag tag-outline">Read the posting</span>
+<span class="tag tag-accent">Northwind Health</span>
+<span class="tag tag-accent">Senior Product Designer</span>
+<span class="tag tag-accent-2">Remote · US</span>
+</div>
+</sc-if>
+
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin:26px 0 10px">Cover letter tone</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<sc-for list="{{ tones }}" as="t" hint-placeholder-count="4">
+<button style="{{ t.style }}" onClick="{{ t.pick }}">{{ t.label }}</button>
+</sc-for>
+</div>
+
+<button style="display:flex;align-items:center;gap:13px;width:100%;text-align:left;cursor:pointer;font-family:inherit;background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);padding:15px 16px;margin-top:20px" onClick="{{ togglePlain }}">
+<div style="flex:1;min-width:0">
+<div style="font-size:14.5px;font-weight:600">Keep it in plain words</div>
+<div style="font-size:12.5px;line-height:1.4;color:var(--color-neutral-600);margin-top:2px">No stock phrases, no "I am excited to apply". Contractions kept, sentences short.</div>
+</div>
+<div style="{{ plainSwitch }}"><div style="{{ plainKnob }}"></div></div>
+</button>
+<div style="margin-top:14px;background:var(--color-accent-2-100);border-radius:var(--radius-md);padding:14px 16px;font-size:13px;color:var(--color-accent-2-800)">Pulls from your saved background, so you never retype your history.</div>
+</div>
+<div style="padding:14px 22px 42px;background:var(--color-bg);border-top:1px solid var(--color-divider)">
+<button class="btn btn-primary btn-block" style="padding:19px;font-size:17px;border-radius:999px;box-shadow:0 8px 22px rgba(198,113,57,.3);{{ runStyle }}" onClick="{{ runPress }}">Write my application</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isRunning }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 34px">
+<div style="width:96px;height:96px;border-radius:999px;background:var(--color-accent-300);margin:0 auto 30px;display:flex;align-items:center;justify-content:center;animation:pressPulse 1.6s ease-in-out infinite">
+<div style="width:58px;height:58px;border-radius:999px;background:var(--color-accent-600)"></div>
+</div>
+<h3 style="text-align:center;margin:0 0 6px">Writing</h3>
+<div style="text-align:center;font-size:13px;color:var(--color-neutral-600);margin-bottom:34px">{{ runStatus }}</div>
+<div style="display:flex;flex-direction:column;gap:18px">
+<sc-for list="{{ stages }}" as="s" hint-placeholder-count="3">
+<div>
+<div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px">
+<span style="font-weight:600">{{ s.label }}</span>
+<span style="color:var(--color-neutral-600)">{{ s.note }}</span>
+</div>
+<div style="height:8px;border-radius:999px;background:var(--color-neutral-300);overflow:hidden">
+<div style="{{ s.barStyle }}"></div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isDocs }}" hint-placeholder-val="{{ false }}">
+<div style="padding:64px 22px 12px;background:var(--color-bg)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+<button class="ios-back" onClick="{{ goHome }}"><span style="font-size:26px;line-height:1;margin-top:-3px">‹</span>Back</button>
+<div style="flex:1;min-width:0">
+<div style="font-size:17px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ docRole }}</div>
+<div style="font-size:12.5px;color:var(--color-neutral-600)">{{ docCompany }}</div>
+</div>
+<sc-if value="{{ showScore }}" hint-placeholder-val="{{ true }}">
+<div style="width:52px;height:52px;border-radius:999px;background:var(--color-accent-2-200);flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1">
+<span style="font-family:var(--font-heading);font-size:17px;color:var(--color-accent-2-800)">{{ score }}</span>
+<span style="font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-2-700)">match</span>
+</div>
+</sc-if>
+</div>
+<div style="display:flex;gap:6px;background:var(--color-surface);border-radius:999px;padding:4px">
+<sc-for list="{{ tabs }}" as="tb" hint-placeholder-count="3">
+<button style="{{ tb.style }}" onClick="{{ tb.pick }}">{{ tb.label }}</button>
+</sc-for>
+</div>
+</div>
+<div style="flex:1;overflow:auto;padding:14px 22px 24px">
+
+<sc-if value="{{ isResumeTab }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;gap:7px;margin-bottom:14px">
+<sc-for list="{{ designs }}" as="d" hint-placeholder-count="3">
+<button style="{{ d.style }}" onClick="{{ d.pick }}">{{ d.label }}</button>
+</sc-for>
+</div>
+
+<div class="pm-sheet" style="background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);overflow:hidden">
+
+<sc-if value="{{ isRuled }}" hint-placeholder-val="{{ true }}">
+<div style="padding:22px 20px">
+<div style="font-family:var(--font-heading);font-size:22px;line-height:1.1">Jordan Reyes</div>
+<div style="font-size:12px;color:var(--color-accent-700);font-weight:600;margin-top:3px">Senior Product Designer</div>
+<div style="font-size:10.5px;color:var(--color-neutral-600);margin-top:5px">Austin, TX · jordan@reyes.design · linkedin.com/in/jordanreyes</div>
+<div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700);margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--color-divider)">Summary</div>
+<div style="font-size:12px;line-height:1.55">Eight years on clinical and operational tools. I work on the floor with the people who use them, and I measure the result in minutes saved and errors avoided.</div>
+<div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700);margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--color-divider)">Experience</div>
+<sc-for list="{{ jobs }}" as="j" hint-placeholder-count="3">
+<div style="margin-bottom:11px">
+<div style="font-size:12.5px;font-weight:700;line-height:1.35">{{ j.role }} · {{ j.org }}</div>
+<div style="font-size:10px;color:var(--color-neutral-600);margin-top:1px">{{ j.dates }}</div>
+<sc-for list="{{ j.bullets }}" as="b" hint-placeholder-count="2">
+<div style="display:flex;gap:7px;margin-top:4px">
+<span style="color:var(--color-accent-500);font-size:11px;line-height:1.5">●</span>
+<span style="font-size:11.5px;line-height:1.5;color:var(--color-neutral-900)">{{ b }}</span>
+</div>
+</sc-for>
+</div>
+</sc-for>
+<div style="font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700);margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--color-divider)">Skills</div>
+<div style="font-size:11.5px;line-height:1.6;color:var(--color-neutral-900)">Service blueprinting · Clinical workflow research · Design systems · Prototyping · WCAG 2.2 · Figma</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isColumn }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:stretch">
+<div style="width:112px;flex:none;background:var(--color-accent-2-100);padding:20px 13px">
+<div style="width:40px;height:40px;border-radius:999px;background:var(--color-accent-2-500);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:15px;margin-bottom:14px">JR</div>
+<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-accent-2-700);margin-bottom:5px">Contact</div>
+<div style="font-size:10px;line-height:1.5;color:var(--color-accent-2-900);margin-bottom:16px">Austin, TX<br>jordan@reyes.design<br>linkedin.com/in/jordanreyes</div>
+<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-accent-2-700);margin-bottom:6px">Skills</div>
+<div style="display:flex;flex-direction:column;gap:5px">
+<sc-for list="{{ skills }}" as="s" hint-placeholder-count="6">
+<span style="font-size:10px;line-height:1.35;color:var(--color-accent-2-900)">{{ s }}</span>
+</sc-for>
+</div>
+</div>
+<div style="flex:1;min-width:0;padding:20px 16px">
+<div style="font-family:var(--font-heading);font-size:19px;line-height:1.1">Jordan Reyes</div>
+<div style="font-size:11.5px;color:var(--color-accent-700);font-weight:600;margin:3px 0 12px">Senior Product Designer</div>
+<div style="font-size:11.5px;line-height:1.55;color:var(--color-neutral-900);margin-bottom:14px">Eight years on clinical and operational tools, most of it on triage and handoff.</div>
+<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-neutral-700);margin-bottom:8px">Experience</div>
+<sc-for list="{{ jobs }}" as="j" hint-placeholder-count="3">
+<div style="margin-bottom:12px;padding-left:11px;border-left:2px solid var(--color-accent-300)">
+<div style="font-size:12px;font-weight:700">{{ j.role }}</div>
+<div style="font-size:10px;color:var(--color-neutral-600);margin-bottom:4px">{{ j.org }} · {{ j.dates }}</div>
+<sc-for list="{{ j.bullets }}" as="b" hint-placeholder-count="2">
+<div style="font-size:11px;line-height:1.5;color:var(--color-neutral-900);margin-bottom:3px">{{ b }}</div>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isEditorial }}" hint-placeholder-val="{{ false }}">
+<div style="padding:24px 20px">
+<div style="font-family:var(--font-heading);font-size:31px;line-height:.98;letter-spacing:-.02em">Jordan<br>Reyes</div>
+<div style="height:6px;width:64px;border-radius:999px;background:var(--color-accent-500);margin:12px 0 10px"></div>
+<div style="font-size:12.5px;font-weight:700;color:var(--color-accent-700)">Senior Product Designer</div>
+<div style="font-size:10.5px;color:var(--color-neutral-600);margin-top:4px">Austin, TX · jordan@reyes.design</div>
+<div style="font-size:12.5px;line-height:1.6;margin:16px 0 18px">Eight years on clinical tools. I take the parts of a shift that are a mess (triage queues, handoffs, dispatch) and make them ordinary.</div>
+<sc-for list="{{ jobs }}" as="j" hint-placeholder-count="3">
+<div style="display:flex;gap:11px;margin-bottom:14px">
+<div style="width:9px;height:9px;border-radius:999px;background:var(--color-accent-2-500);flex:none;margin-top:5px"></div>
+<div style="flex:1;min-width:0">
+<div style="font-family:var(--font-heading);font-size:14.5px">{{ j.role }}</div>
+<div style="font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-neutral-600);margin:2px 0 5px">{{ j.org }} — {{ j.dates }}</div>
+<sc-for list="{{ j.bullets }}" as="b" hint-placeholder-count="2">
+<div style="font-size:11.5px;line-height:1.5;color:var(--color-neutral-900);margin-bottom:3px">{{ b }}</div>
+</sc-for>
+</div>
+</div>
+</sc-for>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
+<sc-for list="{{ skills }}" as="s" hint-placeholder-count="6">
+<span style="font-size:10px;font-weight:600;padding:4px 9px;border-radius:999px;background:var(--color-accent-100);color:var(--color-accent-800)">{{ s }}</span>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isTextDoc }}" hint-placeholder-val="{{ false }}">
+<div style="background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);padding:22px 20px">
+<sc-for list="{{ docBlocks }}" as="b" hint-placeholder-count="6">
+<div style="{{ b.style }}">{{ b.text }}</div>
+</sc-for>
+</div>
+</sc-if>
+<div style="display:flex;align-items:center;gap:11px;background:var(--color-accent-2-100);border-radius:var(--radius-md);padding:13px 15px;margin-top:14px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#aebf92" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m4 12.5 5 5L20 6.5"></path></svg>
+<div style="font-size:12.5px;line-height:1.4;color:var(--color-accent-2-900)">Read back for stock phrasing. {{ tellCount }}</div>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+<span class="tag tag-outline">Tailored to 7 requirements</span>
+<span class="tag tag-neutral">{{ toneLabel }}</span>
+<span class="tag tag-accent-2">One page</span>
+</div>
+</div>
+<div style="padding:12px 22px 42px;background:var(--color-bg);border-top:1px solid var(--color-divider);display:flex;gap:10px">
+<button class="btn btn-secondary" style="flex:1;padding:14px;font-size:14px" onClick="{{ copyDoc }}">{{ copyLabel }}</button>
+<button class="btn btn-secondary" style="flex:1;padding:14px;font-size:14px" onClick="{{ openExport }}">Export</button>
+<button class="btn btn-primary" style="padding:14px 20px;font-size:14px" onClick="{{ runPress }}">Redo</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ exportOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;z-index:80;background:rgba(0,0,0,.55);backdrop-filter:blur(2px);display:flex;flex-direction:column;justify-content:flex-end" onClick="{{ closeExport }}">
+<div style="background:#1c1c1e;border-radius:26px 26px 0 0;padding:10px 16px 34px;animation:riseIn .22s ease both;box-shadow:inset 0 .5px 0 rgba(255,255,255,.14)">
+<div style="width:38px;height:5px;border-radius:999px;background:rgba(235,235,245,.3);margin:0 auto 14px"></div>
+<div style="font-size:17px;font-weight:600;text-align:center;margin-bottom:4px">Export resume</div>
+<div style="font-size:12.5px;color:var(--color-neutral-600);text-align:center;margin-bottom:16px">Ruled design · one page</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ exports }}" as="x" hint-placeholder-count="4">
+<button style="display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;font-family:inherit;background:#2c2c2e;border:0;border-radius:16px;padding:15px 16px" onClick="{{ closeExport }}">
+<div style="flex:1;min-width:0">
+<div style="font-size:15px;font-weight:590">{{ x.label }}</div>
+<div style="font-size:12px;color:var(--color-neutral-600);margin-top:1px">{{ x.note }}</div>
+</div>
+<span style="color:var(--color-accent-700);font-size:17px">›</span>
+</button>
+</sc-for>
+</div>
+<button class="btn btn-block" style="margin-top:12px;padding:16px;font-size:16px;border-radius:999px;background:#2c2c2e;color:#f6a06b" onClick="{{ closeExport }}">Cancel</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isProfile }}" hint-placeholder-val="{{ false }}">
+<div style="flex:1;overflow:auto;padding:64px 22px 30px">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+<button class="ios-back" onClick="{{ goHome }}"><span style="font-size:26px;line-height:1;margin-top:-3px">‹</span>Back</button>
+<div style="font-size:15px;color:var(--color-neutral-600);font-weight:500">Your background</div>
+</div>
+<h3 class="ios-lt" style="margin:4px 0 18px">Background</h3>
+<div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+<div style="width:62px;height:62px;border-radius:999px;background:var(--color-accent-2-300);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:22px;color:var(--color-accent-2-800)">JR</div>
+<div>
+<div style="font-family:var(--font-heading);font-size:19px">Jordan Reyes</div>
+<div style="font-size:13px;color:var(--color-neutral-600)">jordan@reyes.design · Austin, TX</div>
+</div>
+</div>
+<div class="ios-sh">History</div>
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px">
+<sc-for list="{{ history }}" as="h" hint-placeholder-count="4">
+<div style="display:flex;gap:12px;align-items:center;background:var(--color-neutral-100);border:0;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.08);border-radius:var(--radius-md);padding:13px 15px">
+<div style="width:8px;height:8px;border-radius:999px;background:var(--color-accent-500);flex:none"></div>
+<div style="flex:1">
+<div style="font-weight:600;font-size:14px">{{ h.role }}</div>
+<div style="font-size:12px;color:var(--color-neutral-600)">{{ h.org }}</div>
+</div>
+<div style="font-size:12px;color:var(--color-neutral-600)">{{ h.years }}</div>
+</div>
+</sc-for>
+</div>
+<div class="ios-sh">In your own words</div>
+<textarea class="input" rows="5" style="width:100%;border-radius:var(--radius-md);resize:none;font-size:14px;line-height:1.5">Design lead for care-team tooling. Took Northwind's triage queue from 11 clicks to 3 and cut nurse handoff errors by a third. I like messy operational problems and shipping with clinicians in the room.</textarea>
+<div style="display:flex;gap:8px;margin-top:10px">
+<button class="btn btn-secondary" style="flex:1;padding:12px;font-size:13px">Dictate</button>
+<button class="btn btn-secondary" style="flex:1;padding:12px;font-size:13px">Import a resume</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ showBar }}" hint-placeholder-val="{{ true }}">
+<div style="padding:0 14px 26px;background:transparent">
+<div style="display:flex;padding:7px 6px;background:rgba(38,38,40,.74);backdrop-filter:blur(26px) saturate(180%);border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.55),inset 0 0 0 .5px rgba(255,255,255,.14)">
+<sc-for list="{{ navItems }}" as="n" hint-placeholder-count="4">
+<button style="{{ n.style }}" onClick="{{ n.pick }}">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="{{ n.path }}"></path></svg>
+<span style="font-size:10px;letter-spacing:0">{{ n.label }}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-import>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:402px">
+<sc-for list="{{ jumps }}" as="j" hint-placeholder-count="5">
+<button style="{{ j.style }}" onClick="{{ j.pick }}">{{ j.label }}</button>
+</sc-for>
+</div>
+</div>
+
+<div style="width:300px;display:flex;flex-direction:column;gap:22px;padding-top:8px">
+<div>
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin-bottom:8px">Decisions I made</div>
+<p style="font-size:13.5px;line-height:1.6;margin:0;color:var(--color-neutral-800)">The desktop tool asked for your history on every run. On a phone that's fatal, so the background moves into the profile and the per-application screen shrinks to two inputs: the posting and a tone. Capture leads with clipboard and camera, because a posting on a phone is almost always in another app.</p>
+</div>
+<div>
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin-bottom:8px">Auto-apply</div>
+<p style="font-size:13.5px;line-height:1.6;margin:0 0 8px;color:var(--color-neutral-800)">Handshake sync lists matching openings with a match score; you pick which ones and start once. Each application is tailored separately — the queue shows a per-job state rather than one bar, so a bulk action still reads as individual work.</p>
+<p style="font-size:13.5px;line-height:1.6;margin:0;color:var(--color-neutral-800)">The URL field takes any careers page or job board so the same treatment covers postings Handshake doesn't carry. One guardrail kept: you review every draft before it sends.</p>
+</div>
+<div>
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin-bottom:8px">Three resume designs</div>
+<p style="font-size:13.5px;line-height:1.6;margin:0 0 8px;color:var(--color-neutral-800)">The Resume tab now carries a design picker. All three hold one page and print to the same content, so switching never loses a line.</p>
+<div style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--color-neutral-800)">
+<div><strong>Ruled</strong> — ruled section heads, single column. The safe one for applicant tracking systems.</div>
+<div><strong>Column</strong> — sage sidebar holds contact and skills so the right column is nothing but evidence.</div>
+<div><strong>Editorial</strong> — display name at full size, skills as pills. For design and brand roles.</div>
+</div>
+</div>
+<div>
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin-bottom:8px">Free, stated plainly</div>
+<p style="font-size:13.5px;line-height:1.6;margin:0;color:var(--color-neutral-800)">No paywall screen, no locked tab. The one line under the main action carries it: unlimited runs, free, powered by Claude.</p>
+</div>
+<div>
+<div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700);font-weight:700;margin-bottom:8px">Sounding human</div>
+<p style="font-size:13.5px;line-height:1.6;margin:0 0 8px;color:var(--color-neutral-800)">The drafts are written the way a person writes: contractions, short sentences, one specific number per claim, no throat-clearing openers and no stock phrases. The Plain words switch on step 2 governs it, and the Documents screen reports what it caught.</p>
+<p style="font-size:13.5px;line-height:1.6;margin:0;color:var(--color-neutral-800)">Generation is still a scripted mock. Say the word and I'll wire real Claude calls behind the same screens.</p>
+</div>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMatchScore&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Output&quot;},&quot;matchScore&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:92,&quot;min&quot;:0,&quot;max&quot;:100,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Output&quot;},&quot;runSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:900,&quot;min&quot;:300,&quot;max&quot;:2000,&quot;step&quot;:100,&quot;unit&quot;:&quot;ms&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+const TONES = ['Professional', 'Warm', 'Concise', 'Enthusiastic'];
+const TABS = ['Resume', 'Cover letter', 'Email'];
+
+const DOCS = {
+  'Resume': [
+    ['h', 'Jordan Reyes'],
+    ['m', 'Senior Product Designer · Austin, TX · jordan@reyes.design'],
+    ['s', 'Summary'],
+    ['p', 'Eight years on clinical and operational tools. I work on the floor with the people who use them, and I measure the result in minutes saved and errors avoided.'],
+    ['s', 'Experience'],
+    ['b', 'Design Lead, Meridian Care — 2021–present'],
+    ['p', 'Rebuilt the triage queue: 11 clicks to 3, nurse handoff errors down 34% across 9 clinics.'],
+    ['p', 'Ran the design system adoption for 6 product teams; cut new-screen build time in half.'],
+    ['b', 'Product Designer, Fieldline — 2018–2021'],
+    ['p', 'Owned scheduling and dispatch for 4,000 field technicians. Redesign lifted on-time arrival 12 points.'],
+    ['s', 'Skills'],
+    ['p', 'Service blueprinting · Clinical workflow research · Design systems · Prototyping · Accessibility (WCAG 2.2)'],
+  ],
+  'Cover letter': [
+    ['m', 'August 29, 2026'],
+    ['p', 'Hello,'],
+    ['p', "I'd like to apply for the Senior Product Designer role."],
+    ['p', "Your posting says the care-team product has outgrown the workflows it was built on. I've spent eight years on that kind of problem. At Meridian, triage took eleven clicks to clear a patient. We got it to three, and handoff errors dropped 34% across nine clinics."],
+    ['p', "You want someone who researches with clinicians rather than around them. I sat with charge nurses on the floor twice a month for two years. Most of what we shipped came out of those sessions, including the handoff change above."],
+    ['p', "I also led the design system rollout across six teams, so I know what it costs when that work gets put off. If you're mid-way through it, that's the part I'd want to pick up first."],
+    ['p', "Happy to walk through any of it."],
+    ['p', 'Jordan Reyes'],
+  ],
+  'Email': [
+    ['m', 'To: careers@northwindhealth.com'],
+    ['b', 'Subject: Senior Product Designer — Jordan Reyes'],
+    ['p', 'Hello,'],
+    ['p', "I'm applying for the Senior Product Designer role. Resume and cover letter are attached."],
+    ['p', "Short version: eight years on clinical tooling, mostly triage and handoff. At Meridian I took the triage queue from eleven clicks to three and handoff errors fell 34% across nine clinics."],
+    ['p', "Glad to talk whenever suits you."],
+    ['p', 'Thanks,'],
+    ['p', 'Jordan Reyes · jordan@reyes.design · linkedin.com/in/jordanreyes'],
+  ],
+};
+
+const BLOCK_STYLE = {
+  h: 'font-family:var(--font-heading);font-size:21px;margin-bottom:2px',
+  m: 'font-size:11.5px;color:var(--color-neutral-600);margin-bottom:14px',
+  s: 'font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--color-accent-700);margin:16px 0 6px;padding-bottom:5px;border-bottom:1px solid var(--color-divider)',
+  b: 'font-size:13.5px;font-weight:700;margin:10px 0 3px',
+  p: 'font-size:13.5px;line-height:1.6;color:var(--color-neutral-900);margin-bottom:8px',
+};
+
+const JOB_TEXT = "Northwind Health — Senior Product Designer (Remote, US)\n\nWe are looking for a designer to lead our care-team experience. You will partner with clinicians, own end-to-end workflows from research through shipped detail, and help mature our design system.\n\nRequirements: 6+ years product design, healthcare or regulated domain experience, comfort running your own research, systems thinking, accessibility fluency.";
+
+const DESIGNS = ['Ruled', 'Column', 'Editorial'];
+
+const JOBS = [
+  { role: 'Design Lead', org: 'Meridian Care', dates: '2021 — present', bullets: [
+    'Rebuilt the triage queue: 11 clicks to 3, nurse handoff errors down 34% across 9 clinics.',
+    'Led design-system adoption for 6 product teams; new-screen build time halved.',
+  ] },
+  { role: 'Product Designer', org: 'Fieldline', dates: '2018 — 2021', bullets: [
+    'Owned scheduling and dispatch for 4,000 field technicians; on-time arrival up 12 points.',
+    'Ran quarterly ride-alongs that reset the roadmap twice.',
+  ] },
+  { role: 'Product Designer', org: 'Onset Studio', dates: '2016 — 2018', bullets: [
+    'Shipped 9 client products across health, logistics and civic services.',
+  ] },
+];
+
+const SKILLS = ['Service blueprinting', 'Clinical workflow research', 'Design systems', 'Prototyping', 'WCAG 2.2', 'Figma'];
+
+const APPLICATIONS = [
+  { id: 1, role: 'Senior Product Designer', company: 'Northwind Health', when: 'Applied today', status: 'Submitted', group: 'Active' },
+  { id: 2, role: 'Product Designer II', company: 'Aster Labs', when: 'Applied today', status: 'Submitted', group: 'Active' },
+  { id: 3, role: 'Design Lead, Platform', company: 'Vela Health', when: 'Screen on 4 Sep', status: 'Interview', group: 'Active' },
+  { id: 4, role: 'Senior UX Designer', company: 'Kestrel Systems', when: 'Applied 2d ago', status: 'Submitted', group: 'Active' },
+  { id: 5, role: 'Staff Product Designer', company: 'Foldwork', when: 'Applied 3w ago', status: 'No reply', group: 'Archived' },
+  { id: 6, role: 'Product Designer, Ops', company: 'Rill', when: 'Not sent', status: 'Draft', group: 'Active' },
+];
+
+const STATUS_TINT = {
+  'Submitted': ['var(--color-accent-2-200)', 'var(--color-accent-2-900)'],
+  'Interview': ['var(--color-accent-200)', 'var(--color-accent-800)'],
+  'No reply': ['var(--color-neutral-200)', 'var(--color-neutral-600)'],
+  'Draft': ['var(--color-neutral-200)', 'var(--color-neutral-800)'],
+};
+
+const FILTERS = ['All', 'Active', 'Archived'];
+
+const EXPORTS = [
+  { label: 'Save as PDF', note: 'One page, ATS-safe text layer' },
+  { label: 'Save as Word (.docx)', note: 'Editable, keeps the design' },
+  { label: 'Copy as plain text', note: 'For paste-in application forms' },
+  { label: 'Email to myself', note: 'jordan@reyes.design' },
+];
+
+class Component extends DCLogic {
+  state = {
+    screen: 'welcome', filter: 'All', exportOpen: false, jobText: '', tone: 'Professional', tab: 'Resume',
+    design: 'Ruled', stage: -1, copied: false, parse: 'idle',
+    batch: 'idle', done: [], current: null, siteUrl: '', plain: true, selected: APPLICATIONS[0],
+    sites: [{ url: 'boards.greenhouse.io/northwind', note: 'Watching · tailors per posting' }],
+    openings: [
+      { id: 1, company: 'Northwind Health', role: 'Senior Product Designer', match: 92, meta: 'Handshake · closes in 6d', on: true },
+      { id: 2, company: 'Aster Labs', role: 'Product Designer II', match: 88, meta: 'Handshake · closes in 9d', on: true },
+      { id: 3, company: 'Vela Health', role: 'Design Lead, Platform', match: 85, meta: 'Handshake · closes in 3d', on: true },
+      { id: 4, company: 'Kestrel Systems', role: 'Senior UX Designer', match: 81, meta: 'Handshake · rolling', on: true },
+      { id: 5, company: 'Rill', role: 'Product Designer, Ops', match: 74, meta: 'Handshake · closes in 12d', on: false },
+      { id: 6, company: 'Foldwork', role: 'Interaction Designer', match: 68, meta: 'Handshake · rolling', on: false },
+    ],
+  };
+
+  openApp = app => () => this.setState({ screen: 'docs', selected: app });
+
+  toggleOpening = id => () => this.setState(s => ({
+    openings: s.openings.map(o => o.id === id ? { ...o, on: !o.on } : o),
+  }));
+
+  selectAll = () => this.setState(s => {
+    const all = s.openings.every(o => o.on);
+    return { openings: s.openings.map(o => ({ ...o, on: !all })) };
+  });
+
+  addSite = () => this.setState(s => {
+    const url = s.siteUrl.trim();
+    if (!url) return {};
+    return { sites: s.sites.concat([{ url, note: 'Watching · tailors per posting' }]), siteUrl: '' };
+  });
+
+  startBatch = () => {
+    clearInterval(this.batchTimer);
+    const queue = this.state.openings.filter(o => o.on).map(o => o.id);
+    if (!queue.length) return;
+    this.setState({ batch: 'running', done: [], current: queue[0] });
+    let i = 0;
+    this.batchTimer = setInterval(() => {
+      i += 1;
+      this.setState(s => ({
+        done: s.done.concat([queue[i - 1]]),
+        current: queue[i] ?? null,
+        batch: i >= queue.length ? 'done' : 'running',
+      }));
+      if (i >= queue.length) clearInterval(this.batchTimer);
+    }, 850);
+  };
+
+  uploadResume = () => {
+    clearInterval(this.parseTimer);
+    this.setState({ parse: 'reading' });
+    this.parseTimer = setTimeout(() => this.setState({ parse: 'parsed' }), 1300);
+  };
+
+  componentWillUnmount() { clearInterval(this.timer); }
+
+  set(patch) { this.setState(patch); }
+
+  go(screen) { return () => { clearInterval(this.timer); this.setState({ screen }); }; }
+
+  runPress = () => {
+    clearInterval(this.timer);
+    this.setState({ screen: 'running', stage: 0 });
+    const speed = this.props.runSpeed ?? 900;
+    this.timer = setInterval(() => {
+      this.setState(s => {
+        if (s.stage >= 3) { clearInterval(this.timer); return { screen: 'docs', stage: -1 }; }
+        return { stage: s.stage + 1 };
+      });
+    }, speed);
+  };
+
+  pillStyle(active) {
+    return 'cursor:pointer;font-family:-apple-system,system-ui;font-size:13px;font-weight:590;padding:9px 16px;border-radius:999px;border:1px solid ' +
+      (active ? 'var(--color-accent-600);background:var(--color-accent-600);color:#fff' : 'var(--color-divider);background:transparent;color:var(--color-text)');
+  }
+
+  renderVals() {
+    const { screen, jobText, tone, tab, design, stage, copied, parse, batch, done, current, openings, sites, siteUrl } = this.state;
+    const selectedCount = openings.filter(o => o.on).length;
+    const stages = TABS.map((label, i) => {
+      const pct = stage > i ? 100 : stage === i ? 64 : 0;
+      return {
+        label,
+        note: stage > i ? 'done' : stage === i ? 'drafting' : 'queued',
+        barStyle: 'height:100%;border-radius:999px;transition:width .7s ease;background:' +
+          (stage > i ? 'var(--color-accent-2-500)' : 'var(--color-accent-500)') + ';width:' + pct + '%',
+      };
+    });
+
+    return {
+      isHome: screen === 'home', isInput: screen === 'input', isRunning: screen === 'running',
+      isUpload: screen === 'upload',
+      continueStyle: parse === 'parsed' ? '' : 'opacity:.45;pointer-events:none',
+      isAuto: screen === 'auto',
+      goAuto: this.go('auto'),
+      isWelcome: screen === 'welcome', goWelcome: this.go('welcome'),
+      welcomePoints: [
+        'Your history is read out of your old resume, once.',
+        'Written plainly, in your own words, not in stock phrases.',
+        'Nothing sends until you have read it.',
+      ],
+      isApps: screen === 'apps', goApps: this.go('apps'),
+      exportOpen: this.state.exportOpen,
+      openExport: () => this.set({ exportOpen: true }),
+      closeExport: () => this.set({ exportOpen: false }),
+      exports: EXPORTS,
+      filters: FILTERS.map(label => ({
+        label,
+        pick: () => this.set({ filter: label }),
+        style: 'flex:1;cursor:pointer;font-family:-apple-system,system-ui;font-size:13px;font-weight:590;padding:9px 4px;border-radius:999px;border:0;' +
+          (this.state.filter === label ? 'background:#3a3a3c;color:#fff' : 'background:transparent;color:var(--color-neutral-600)'),
+      })),
+      applications: APPLICATIONS.filter(a => this.state.filter === 'All' || a.group === this.state.filter).map(a => ({
+        ...a,
+        open: this.openApp(a),
+        statusStyle: 'flex:none;font-size:11.5px;font-weight:590;padding:4px 10px;border-radius:999px;background:' +
+          STATUS_TINT[a.status][0] + ';color:' + STATUS_TINT[a.status][1],
+      })),
+      batchIdle: batch === 'idle', batchRunning: batch !== 'idle',
+      batchDone: batch === 'done',
+      batchLabel: 'Tailor and apply to ' + selectedCount,
+      batchStyle: selectedCount ? '' : 'opacity:.45;pointer-events:none',
+      batchHeadline: batch === 'done' ? 'Applied to ' + done.length + ' openings' : 'Applying — ' + done.length + ' of ' + selectedCount,
+      batchNote: batch === 'done' ? 'Each one got its own tailored resume and cover letter. Confirmations are in Documents.' : 'Reading each posting, rewriting your resume for it, filling the form.',
+      selectAll: this.selectAll,
+      selectAllLabel: openings.every(o => o.on) ? 'Clear all' : 'Select all',
+      siteUrl,
+      onSiteChange: e => this.set({ siteUrl: e.target.value }),
+      addSite: this.addSite,
+      addStyle: siteUrl.trim() ? '' : 'opacity:.45;pointer-events:none',
+      sites,
+      openings: openings.map(o => ({
+        ...o,
+        matchLabel: o.match + '%',
+        rowStyle: 'display:flex;gap:13px;align-items:center;text-align:left;width:100%;cursor:pointer;font-family:inherit;border-radius:var(--radius-md);padding:13px 15px;border:1px solid ' +
+          (o.on ? 'var(--color-accent-300);background:var(--color-accent-100)' : 'var(--color-divider);background:var(--color-neutral-100)'),
+        boxStyle: 'width:22px;height:22px;border-radius:999px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;background:' +
+          (o.on ? 'var(--color-accent-600)' : 'var(--color-neutral-300)'),
+        check: o.on ? '✓' : '',
+        toggle: this.toggleOpening(o.id),
+      })),
+      queue: openings.filter(o => o.on).map(o => {
+        const isDone = done.includes(o.id);
+        const isNow = current === o.id;
+        return {
+          role: o.role, company: o.company,
+          state: isDone ? 'Submitted' : isNow ? 'Tailoring…' : 'Queued',
+          dotStyle: 'width:22px;height:22px;border-radius:999px;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;background:' +
+            (isDone ? 'var(--color-accent-2-500)' : isNow ? 'var(--color-accent-500)' : 'var(--color-neutral-300)') +
+            (isNow ? ';animation:pressPulse 1s ease-in-out infinite' : ''),
+          dot: isDone ? '✓' : '',
+          stateStyle: 'font-size:12px;font-weight:600;color:' + (isDone ? 'var(--color-accent-2-700)' : isNow ? 'var(--color-accent-700)' : 'var(--color-neutral-600)'),
+        };
+      }),
+      startBatch: this.startBatch,
+      resetBatch: () => this.set({ batch: 'idle', done: [], current: null }),
+      goUpload: this.go('upload'),
+      uploadResume: this.uploadResume,
+      parseIdle: parse === 'idle', parseReading: parse === 'reading', parseDone: parse === 'parsed',
+      extracted: [
+        { field: 'Name', value: 'Jordan Reyes' },
+        { field: 'Title', value: 'Senior Product Designer' },
+        { field: 'Contact', value: 'jordan@reyes.design · Austin, TX' },
+        { field: 'Roles found', value: '4 positions, 2016 — present' },
+        { field: 'Skills found', value: '14 skills' },
+      ],
+      isDocs: screen === 'docs', isProfile: screen === 'profile',
+      showBar: screen === 'home' || screen === 'profile' || screen === 'auto' || screen === 'apps',
+      hasJob: jobText.trim().length > 40,
+      jobText,
+      score: this.props.matchScore ?? 92,
+      showScore: this.props.showMatchScore ?? true,
+      toneLabel: tone + ' tone',
+      togglePlain: () => this.setState(s => ({ plain: !s.plain })),
+      plainSwitch: 'width:51px;height:31px;border-radius:999px;flex:none;padding:2px;display:flex;transition:background .2s ease;justify-content:' +
+        (this.state.plain ? 'flex-end' : 'flex-start') + ';background:' + (this.state.plain ? '#8fa073' : '#3a3a3c'),
+      plainKnob: 'width:27px;height:27px;border-radius:999px;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.35)',
+      tellCount: this.state.plain ? 'Nothing flagged.' : 'Plain words are off, so this one may read like a template.',
+      copyLabel: copied ? 'Copied' : 'Copy',
+      runStyle: jobText.trim().length > 40 ? '' : 'opacity:.45;pointer-events:none',
+      runStatus: stage < 1 ? 'Reading the posting like a spec' : stage < 2 ? 'Matching your history to its requirements' : stage < 3 ? 'Setting the tone you picked' : 'Reading it back for anything that sounds automated',
+      stages,
+      goHome: this.go('home'), goInput: this.go('input'), goProfile: this.go('profile'),
+      openDocs: this.go('docs'),
+      docRole: this.state.selected.role, docCompany: this.state.selected.company,
+      runPress: this.runPress,
+      pasteJob: () => this.set({ jobText: JOB_TEXT }),
+      onJobChange: e => this.set({ jobText: e.target.value }),
+      copyDoc: () => { this.set({ copied: true }); setTimeout(() => this.set({ copied: false }), 1400); },
+      tones: TONES.map(label => ({ label, style: this.pillStyle(tone === label), pick: () => this.set({ tone: label }) })),
+      tabs: TABS.map(label => ({
+        label,
+        pick: () => this.set({ tab: label }),
+        style: 'flex:1;cursor:pointer;font-family:-apple-system,system-ui;font-size:13px;font-weight:590;padding:10px 4px;border-radius:999px;border:0;' +
+          (tab === label ? 'background:var(--color-neutral-100);color:var(--color-text);box-shadow:var(--shadow-sm)' : 'background:transparent;color:var(--color-neutral-700)'),
+      })),
+      docBlocks: (DOCS[tab] || []).map(([k, text]) => ({ text, style: BLOCK_STYLE[k] })),
+      isResumeTab: tab === 'Resume',
+      isTextDoc: tab !== 'Resume',
+      isRuled: design === 'Ruled', isColumn: design === 'Column', isEditorial: design === 'Editorial',
+      designs: DESIGNS.map(label => ({ label, style: this.pillStyle(design === label), pick: () => this.set({ design: label }) })),
+      jobs: JOBS, skills: SKILLS,
+      navItems: [
+        { key: 'home', path: 'M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-7H10v7H4a1 1 0 0 1-1-1z', label: 'Home' },
+        { key: 'auto', path: 'M13 2 4.5 13.5H11L10 22l8.5-11.5H12z', label: 'Auto-apply' },
+        { key: 'apps', path: 'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zm0 0v5h5M9 13h6M9 17h4', label: 'Applications' },
+        { key: 'profile', path: 'M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4.5 21a7.5 7.5 0 0 1 15 0', label: 'Background' },
+      ].map(n => ({
+        path: n.path, label: n.label, pick: this.go(n.key),
+        style: 'flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;background:transparent;border:0;cursor:pointer;font-family:-apple-system,system-ui;letter-spacing:-.01em;color:' +
+          (screen === n.key ? 'var(--color-accent-700);font-weight:600' : 'var(--color-neutral-600);font-weight:500'),
+      })),
+      jumps: [
+        { key: 'welcome', label: 'Welcome' }, { key: 'home', label: 'Home' },
+        { key: 'upload', label: 'Upload resume' }, { key: 'input', label: 'Paste the job' },
+        { key: 'auto', label: 'Auto-apply' }, { key: 'apps', label: 'Applications' },
+        { key: 'running', label: 'Writing' }, { key: 'docs', label: 'Documents' },
+        { key: 'profile', label: 'Background' },
+      ].map(j => ({
+        label: j.label,
+        pick: j.key === 'running' ? this.runPress : this.go(j.key),
+        style: 'cursor:pointer;font-family:var(--font-body);font-size:12px;padding:7px 13px;border-radius:999px;border:1px solid var(--color-divider);' +
+          (screen === j.key ? 'background:var(--color-text);color:var(--color-bg);border-color:var(--color-text)' : 'background:rgba(255,255,255,.5);color:var(--color-neutral-800)'),
+      })),
+      recents: APPLICATIONS.slice(0, 3).map(a => ({
+        initial: a.company.charAt(0), role: a.role, company: a.company, when: a.when, status: a.status,
+        open: this.openApp(a),
+        statusStyle: 'flex:none;font-size:11.5px;font-weight:590;padding:4px 10px;border-radius:999px;background:' +
+          STATUS_TINT[a.status][0] + ';color:' + STATUS_TINT[a.status][1],
+      })),
+      history: [
+        { role: 'Design Lead', org: 'Meridian Care', years: '2021–now' },
+        { role: 'Product Designer', org: 'Fieldline', years: '2018–21' },
+        { role: 'Product Designer', org: 'Onset Studio', years: '2016–18' },
+        { role: 'BFA, Design', org: 'UT Austin', years: '2016' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
